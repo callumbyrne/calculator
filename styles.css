@@ -1,0 +1,106 @@
+html {
+    font-family: 'Exo', sans-serif;
+}
+
+body {
+    background-color: #d9d9d9;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin: 15px 0px 0px 0px;
+    font-size: 25px;
+    color:rgb(143, 149, 155);
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 600px;
+    width: 400px;
+    min-width: 400px;
+    border-radius: 30px;
+    background-color: #353535;
+    box-shadow: 0 0 15px rgb(20, 20, 20) inset;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 358px;
+    border: 1px solid black;
+    margin: 0px 20px 5px 20px;
+    border-radius: 10px;
+    background-color: #7e8c74;
+}
+
+.equation {
+    height: 20%;
+}
+
+.display {
+    height: 80%;
+    width: 358px;
+    position: relative;
+}
+
+.displayText {
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 360px;
+    margin: 5px 20px 20px 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+button {
+    border: 1px solid black;
+    width: 75px;
+    height: 60px;
+    margin: 5px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 1px 1px 1px black;
+    background-color: #353535;
+}
+
+.blank {
+    width: 75px;
+    height: 60px;
+    margin: 5px;
+}
+
+#clear {
+    background-color: #f1666d;
+    color: black;
+}
+
+#equals {
+    background-color: #ec8c52;
+    color: black;
+}
+
+#operator {
+    background-color: grey;
+}
