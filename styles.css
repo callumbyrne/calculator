@@ -4,13 +4,14 @@ html {
 
 body {
     background-color: #d9d9d9;
+    margin: 0;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 h1 {
@@ -45,11 +46,19 @@ h1 {
 }
 
 .equation {
-    height: 20%;
+    height: 25%;
+    position: relative;
+}
+
+.equationText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0px 20px;
 }
 
 .display {
-    height: 80%;
+    height: 75%;
     width: 358px;
     position: relative;
 }
@@ -59,7 +68,7 @@ h1 {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 10px 20px;
+    margin: 5px 20px;
 }
 
 .buttons {
@@ -73,6 +82,7 @@ h1 {
 }
 
 button {
+    cursor: pointer;
     border: 1px solid black;
     width: 75px;
     height: 60px;
@@ -85,22 +95,26 @@ button {
     background-color: #353535;
 }
 
+button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
 .blank {
     width: 75px;
     height: 60px;
     margin: 5px;
 }
 
-#clear {
+.clear {
     background-color: #f1666d;
     color: black;
 }
 
-#equals {
+.equals {
     background-color: #ec8c52;
     color: black;
 }
 
-#operator {
+.operator {
     background-color: grey;
 }
