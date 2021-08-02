@@ -48,6 +48,7 @@ h1 {
 .equation {
     height: 25%;
     position: relative;
+    max-width: 358px;
 }
 
 .equationText {
@@ -61,6 +62,7 @@ h1 {
     height: 75%;
     width: 358px;
     position: relative;
+    max-width: 358px;
 }
 
 .displayText {

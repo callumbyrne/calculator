@@ -54,19 +54,19 @@ function clear() {
 };
 
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 };
 
 function subtract(a, b) {
-    return parseInt(a) - parseInt(b);
+    return parseFloat(a) - parseFloat(b);
 };
 
 function multiply(a, b) {
-    return parseInt(a) * parseInt(b);
+    return parseFloat(a) * parseFloat(b);
 };
 
 function divide(a, b) {
-    return parseInt(a) / parseInt(b);
+    return parseFloat(a) / parseFloat(b);
 };
 
 function operate(operator, a, b) {
@@ -86,13 +86,17 @@ function operate(operator, a, b) {
 
 document.querySelectorAll(".number").forEach(num => {
     num.addEventListener('click', (e) => {
-        value += e.target.innerText;
-        equation += e.target.innerText;
-        if (a !== "") {
-            b += value;
+        if (value.length == 13) {
+            return;
+        } else {
+            value += e.target.innerText;
+            equation += e.target.innerText;
+            if (a !== "") {
+                b += value;
+            };
+            displayValue();
+            displayEquation();
         };
-        displayValue();
-        displayEquation();
     });
 });
 
@@ -101,8 +105,8 @@ document.querySelectorAll(".operator").forEach(op => {
         if (equation === "") {
             return;
         } else if (b !== "") {
-            let solution = operate(operator, a, b);
-            value = solution;
+            let solution = parseFloat(operate(operator, a, b));
+            value = Math.round((solution + Number.EPSILON) * 100) / 100;
             a = solution;
             b = "";
             operator = e.target.id;
@@ -132,8 +136,8 @@ equals.addEventListener('click', () => {
         return;
     } else {
         b = value;
-        let solution = operate(operator, a, b);
-        value = solution;
+        let solution = parseFloat(operate(operator, a, b));
+        value = Math.round((solution + Number.EPSILON) * 100) / 100;
         a = solution;
         b = "";
         displayValue();
@@ -142,8 +146,6 @@ equals.addEventListener('click', () => {
 });
 
 ac.addEventListener('click', clear);
-
-
 
 
 displayValue();
